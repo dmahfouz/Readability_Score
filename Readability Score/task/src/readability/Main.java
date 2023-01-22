@@ -4,9 +4,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.sql.SQLOutput;
-import java.text.MessageFormat;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -98,33 +95,14 @@ public class Main {
         };
     }
 
-    private static double calculateAriScore(
-            int numChars,
-            int numWords,
-            int numSents
-    ) throws ArithmeticException {
-        return 4.71 * numChars / numWords +
-                0.5 * numWords / numSents - 21.43;
-
-    }
-
     private static double calculateAriScore(String text) throws ArithmeticException {
         int numChars = countNumberOfChars(text);
         int numWords = countNumberOfWords(text);
         int numSents = countNumberOfSents(text);
 
-        return calculateAriScore(numChars, numWords, numSents);
+        return 4.71 * numChars / numWords +
+                0.5 * numWords / numSents - 21.43;
 
-    }
-
-    private static double calculateFkScore(
-            int numWords,
-            int numSents,
-            int numSyllables
-    ) throws ArithmeticException {
-
-        return 0.39 * numWords / numSents +
-                11.8 * numSyllables / numWords - 15.59;
     }
 
     private static double calculateFkScore(String text) throws ArithmeticException {
@@ -132,29 +110,16 @@ public class Main {
         int numSents = countNumberOfSents(text);
         int numSyllables = countNumberOfSyllables(text);
 
-        return calculateFkScore(numWords, numSents, numSyllables);
+        return 0.39 * numWords / numSents +
+                11.8 * numSyllables / numWords - 15.59;
 
-    }
-
-    private static double calculateSmogScore(
-            int numPolysyllables,
-            int numSents
-    ) throws ArithmeticException {
-        return 1.043 * Math.sqrt(numPolysyllables * (30.0 / numSents)) + 3.1291;
     }
 
     private static double calculateSmogScore(String text) throws ArithmeticException {
         int numPolysyllables = countNumberOfPolysyllables(text);
         int numSents = countNumberOfSents(text);
 
-        return calculateSmogScore(numPolysyllables, numSents);
-    }
-
-    private static double calculateClScore(int numChars, int numWords, int numSents) {
-        double l = (double) numChars / numWords * 100;
-        double s = (double) numSents / numWords * 100;
-
-        return 0.0588 * l - 0.296 * s - 15.8;
+        return 1.043 * Math.sqrt(numPolysyllables * (30.0 / numSents)) + 3.1291;
     }
 
     private static double calculateClScore(String text) throws ArithmeticException {
@@ -162,7 +127,11 @@ public class Main {
         int numWords = countNumberOfWords(text);
         int numSents = countNumberOfSents(text);
 
-        return calculateClScore(numChars, numWords, numSents);
+        double l = (double) numChars / numWords * 100;
+        double s = (double) numSents / numWords * 100;
+
+        return 0.0588 * l - 0.296 * s - 15.8;
+
 
     }
 

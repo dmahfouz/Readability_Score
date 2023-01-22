@@ -24,4 +24,9 @@ hs_err_pid*
 replay_pid*
 
 # Other topics that don't need to be included
+Topics/
 Topics
+
+# .gradle files
+.gradle/
+
