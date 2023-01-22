@@ -8,17 +8,17 @@
         <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="#JAVA_INTERNAL" />
+        <option name="gradleJvm" value="corretto-17" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/Readability Score/task" />
-            <option value="$PROJECT_DIR$/Readability Score/task/build/classes/java" />
-            <option value="$PROJECT_DIR$/Readability Score/task/build/generated/sources/annotationProcessor/java" />
-            <option value="$PROJECT_DIR$/Readability Score/task/build/generated/sources/headers/java" />
-            <option value="$PROJECT_DIR$/Readability Score/task/build/reports/tests" />
-            <option value="$PROJECT_DIR$/Readability Score/task/build/test-results" />
-            <option value="$PROJECT_DIR$/Readability Score/task/build/tmp" />
+            <option value="$PROJECT_DIR$/ReadabilityScore/task" />
+            <option value="$PROJECT_DIR$/ReadabilityScore/task/build/classes/java" />
+            <option value="$PROJECT_DIR$/ReadabilityScore/task/build/generated/sources/annotationProcessor/java" />
+            <option value="$PROJECT_DIR$/ReadabilityScore/task/build/generated/sources/headers/java" />
+            <option value="$PROJECT_DIR$/ReadabilityScore/task/build/reports/tests" />
+            <option value="$PROJECT_DIR$/ReadabilityScore/task/build/test-results" />
+            <option value="$PROJECT_DIR$/ReadabilityScore/task/build/tmp" />
             <option value="$PROJECT_DIR$/Topics/Command-line arguments/How to pass ints" />
             <option value="$PROJECT_DIR$/Topics/Command-line arguments/Parameters and their values" />
             <option value="$PROJECT_DIR$/Topics/Command-line arguments/Theory" />
