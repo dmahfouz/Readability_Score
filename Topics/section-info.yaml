@@ -1,2 +1,7 @@
 content:
 - Iterating over arrays
+- Objects
+- Files
+- Command-line arguments
+- Debugging techniques
+- Floating-point types
